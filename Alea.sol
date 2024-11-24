@@ -35,6 +35,20 @@ contract Alea {
   }
 
 
+  function initAlea(uint256 blocknumber) public returns (uint256) {
+
+    require(
+      blocknumber > block.number,
+      "Block number should be in the future"
+    );
+
+    alea[blockNumber] = INIT;
+
+    emit InitAlea(blockNumber);
+    return blockNumber;
+  }
+
+
   function getAlea(uint256 bn) validAlea(bn) public returns (uint256) {
 
     if (alea[bn] == INIT)

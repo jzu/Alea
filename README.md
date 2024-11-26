@@ -12,3 +12,5 @@ To sum up, there are three possible states for a tuple when `getAlea()` is calle
 `initAlea()` returns and emits the block number. `getAlea()` returns and emits the hash, or the modulo of this hash if called with the `bound` parameter.
 
 Risk assesment: none at the moment. Proceed with caution. Use this for small stakes only. 
+
+<sub>0x75b885aDb09823bfb1ef8227f5943801EA9853C2</sub>

@@ -13,4 +13,4 @@ To sum up, there are three possible states for a tuple when `getAlea()` is calle
 
 Risk assesment: none at the moment. Proceed with caution. Use this for small stakes only. 
 
-<sub>Buy me a coffee: 0x75b885aDb09823bfb1ef8227f5943801EA9853C2</sub>
+<sub><sup>Buy me a coffee: 0x75b885aDb09823bfb1ef8227f5943801EA9853C2</sup></sub>

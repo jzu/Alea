@@ -1,6 +1,6 @@
 # Alea – The Blockchain as an RNG
 
-Instead of using an expensive oracle, [Alea](https://en.wiktionary.org/wiki/alea#Latin) allows to generate random positive integers using block hashes. Two steps are required: the first one initializes an internal structure, waiting for a block to be built; the second step gives the random value – actually, this block's hash or a derived value. The use of a future block hash when the initialization is called guarantees the randomness.
+Instead of using an expensive oracle, [Alea](https://en.wiktionary.org/wiki/alea#Latin) allows to obtain random positive integers using block hashes. Two steps are required: the first one initializes an internal structure, waiting for a block to be built; the second step gives the random value – actually, this block's hash or a derived value. The use of a future block hash when the initialization is called guarantees the randomness.
 
 `initAlea()` creates a tuple in a mapping where the transaction's current block number, or a future block number if it is called with a parameter, is the key to a constant value, `0xaddeda1ea`. Once the block containing this transaction has been finalized, the first call to `getAlea()` using that block number as a key sets the value to this block's hash and reveals it. Later calls to `getAlea()` with this same block number will reuse the same value. `getAlea()` may be called with or without a `bound` parameter limiting the range of the return value. 
 

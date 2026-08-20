@@ -57,20 +57,3 @@ contract Alea {
     emit GetAlea(alea[bn]);
     return alea[bn];
   }
-
-
-  function getAlea(uint256 bn, uint256 bound) validAlea(bn) public returns (uint256) {
-
-    int256 bounded;
-
-    if (alea[bn] == INIT)
-      alea[bn] = uint256(blockhash(bn));
-    
-    bounded = int256(alea[bn]) % int256(bound);
-    if (bounded < 0)
-      bounded = -bounded;
-
-    emit GetAlea(uint256(bounded));
-    return uint256(bounded);
-  }
-}
